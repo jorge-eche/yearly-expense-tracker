@@ -8,9 +8,7 @@ const ExpensesList = ({ filteredExpenses }) => {
   return (
     <ul className="expenses-list">
       {filteredExpenses.map((expense) => (
-        <li>
-          <ExpenseItem key={expense.id} expense={expense} />
-        </li>
+        <ExpenseItem key={expense.id} expense={expense} />
       ))}
     </ul>
   );
