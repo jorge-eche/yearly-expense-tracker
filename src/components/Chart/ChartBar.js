@@ -1,11 +1,11 @@
 import "./ChartBar.css";
 
-const ChartBar = ({ dataPoint }) => {
-  const { label, max, value, maxValue } = dataPoint;
+const ChartBar = ({ dataPoint, maxValue }) => {
+  const { label, value } = dataPoint;
 
   let barFillHeight = "0%";
 
-  if (max > 0) {
+  if (maxValue > 0) {
     barFillHeight = Math.round((value / maxValue) * 100) + "%";
   }
 
